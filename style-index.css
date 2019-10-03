@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --szer-ski: 70vw;
+    --wys-ski: 90vh;
+    --fontSize-ski: 5em;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+body {
+    background-color: #fef3dd;
+}
+
+#container {
+    width: var(--szer-ski);
+    height: var(--wys-ski);
+    margin-top: calc(calc(100vh - var(--wys-ski))/2);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #aaa;
+}
