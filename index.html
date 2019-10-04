@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,45 @@
     <title>Sylaby</title>
     <link rel="stylesheet" href="style-index.css">
 </head>
+
 <body>
     <main id="container">
-        <div class="zestawy">
-            Zestawy
-        </div>
-        <div class="start">
-            <a href="plansza.html">Startuj</a>
-        </div>
+        <section class="zestawy">
+            <p>Wybierz zestaw sylab</p>
+            <div>
+                <ul class="lista">
+                    <li>
+                        <input type="radio" name="poziomy" value="1"> 1
+                    </li>
+                    <li>
+                        <input type="radio" name="poziomy" value="2" title="dostępne w pełnej wersji"
+                            onclick="pelnaWersja()"> 2
+                    </li>
+                    <li>
+                        <input type="radio" name="poziomy" value="3" title="dostępne w pełnej wersji"
+                            onclick="pelnaWersja()" onclick="pelnaWersja()"> 3
+                    </li>
+                    <li>
+                        <input type="radio" name="poziomy" value="4" title="dostępne w pełnej wersji"
+                            onclick="pelnaWersja()"> 4
+                    </li>
+                    <li>
+                        <input id="piatka" type="radio" name="poziomy" value="5" checked> 5
+                    </li>
+                    <li>
+                        <input type="radio" name="poziomy" value="6" title="dostępne w pełnej wersji"
+                            onclick="pelnaWersja()"> 6
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="start">
+            <button>
+                <a href="plansza.html">Startuj</a>
+            </button>
+        </section>
+
     </main>
     <script type="text/javascript">// <![CDATA[
         var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-20680235-2']); _gaq.push(['_trackPageview']); (function () { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
@@ -23,4 +55,5 @@
 
 
 </body>
+
 </html>
