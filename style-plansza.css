@@ -34,7 +34,7 @@
         height: calc(var(--wys-ski)/3);
     }
 
-    section div.samogloska {
+    section div.sylaba {
         float: left;
         width: calc(100%/3);
         height: 100%;
@@ -44,14 +44,14 @@
         border-style: outset;
     }
 
-    section div.samogloska p {
+    section div.sylaba p {
         line-height: calc(var(--wys-ski)/3);
         font-size: var(--fontSize-ski);
         cursor: pointer;
         transition: .2s;
     }
 
-    section div.samogloska p:hover {
+    section div.sylaba p:hover {
         font-size: calc(var(--fontSize-ski) + 1rem);
     }
 

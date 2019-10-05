@@ -1,20 +1,14 @@
 "use strict";
 
-window.onload = przejmijZestaw;
-
 function przejmijZestaw() {
-    var zestaw = dajWartoscRadio("rgzestawy");
-
-    console.log("w index, zestaw nr: ", zestaw);
-
-
-
+    var zestaw = dajWartoscRadio("zestawy");
+    //Przekazania parametru za pomocą localStorage na inną 'formę'/'activity':
+    localStorage.setItem('nrZestawu',zestaw);
 }
 
 
 function dajWartoscRadio(RGrupa) {
-    var radios = document.getElementsByName(RGrupa);
-    // var radios = document.querySelectorAll(".zestawy lista");
+   var radios = document.getElementsByName(RGrupa);
     console.log("radios: ",radios);
     for (var i = 0, length = radios.length; i < length; i++) {
         if (radios[i].checked) {

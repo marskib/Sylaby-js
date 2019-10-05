@@ -14,35 +14,31 @@
         <section class="zestawy">
             <p>Wybierz zestaw sylab</p>
             <div>
-                <ul id="rgzestawy" class="lista">
+                <ul class="lista">
                     <li>
-                        <input type="radio" name="poziomy" value="1"> 1
+                        <input type="radio" name="zestawy" value="1"> 1
                     </li>
                     <li>
-                        <input type="radio" name="poziomy" value="2" title="dostępne w pełnej wersji"
-                            onclick="pelnaWersja()"> 2
+                        <input type="radio" name="zestawy" value="2"> 2
                     </li>
                     <li>
-                        <input type="radio" name="poziomy" value="3" title="dostępne w pełnej wersji"
-                            onclick="pelnaWersja()" onclick="pelnaWersja()"> 3
+                        <input type="radio" name="zestawy" value="3"> 3
                     </li>
                     <li>
-                        <input type="radio" name="poziomy" value="4" title="dostępne w pełnej wersji"
-                            onclick="pelnaWersja()"> 4
+                        <input type="radio" name="zestawy" value="4"> 4
                     </li>
                     <li>
-                        <input id="piatka" type="radio" name="poziomy" value="5" checked> 5
+                        <input id="piatka" type="radio" name="zestawy" value="5" checked> 5
                     </li>
                     <li>
-                        <input type="radio" name="poziomy" value="6" title="dostępne w pełnej wersji"
-                            onclick="pelnaWersja()"> 6
+                        <input type="radio" name="zestawy" value="6"> 6
                     </li>
                 </ul>
             </div>
         </section>
 
         <section class="start">
-            <a href="plansza.html">Startuj</a>
+            <a href="plansza.html" onclick="przejmijZestaw()">Startuj</a>
         </section>
 
     </main>
