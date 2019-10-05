@@ -7,7 +7,6 @@
 html {
     --szer-ski: 70vw;
     --wys-ski: 90vh;
-    --fontSize-ski: 5em;
     font-family: Verdana, Arial, sans-serif;
 }
 
@@ -27,24 +26,38 @@ body {
 .zestawy {
     display: block;
     text-align: center;
-    padding: 10px 0;
-    /* border:2px solid maroon; */
+    padding: 20px 0;
 }
+ .zestawy p {
+     font-size: 150%;
+ }
 
 .zestawy ul {
     list-style-type: none;
-    line-height: 200%;
+    line-height: 250%;
+    padding-top:10px;
 }
 
-.start button {
-    display:block;
-    margin:10px auto;
-    font-size: 200%;
-    padding:2% 8%;
-    outline: outset;
-}
-
-.start button a {
-    color: green;
+.start a {
+    display: block;
+    width: 30%;
+    text-align: center;
+    color: black;
+    font-weight: 700;
     text-decoration: none;
+    font-size: 200%;
+    line-height: 400%;
+    margin:0 auto;
+    background-color: green;
+    border-radius: 5%;
+    box-shadow: 5px 5px grey;
+    transition: .2s;
+}
+
+.start a:hover {
+    background-color: yellowgreen;
+}
+
+.start a:active {
+    box-shadow: none;
 }
