@@ -3,47 +3,65 @@
 let nrZestawu = "";
 window.onload = ladujZestaw;
 
-const zestaw01 = ["ba","er","kro","la","o","or","sa","ta","wa"];
-const zestaw02 = ["ba2","er2","kro2","la2","o2","or2","sa2","ta2","wa2"];
-const zestaw03 = ["ba3","er3","kro3","la3","o3","or3","sa3","ta3","wa3"];
-const zestawy  = [zestaw01,zestaw02,zestaw03];
+const zestaw01 = ["ba", "er", "kro", "la", "o", "or", "sa", "ta", "wa"];
+const zestaw02 = ["ze", "dy", "eł", "in", "kra", "le", "mar", "mu", "do"];
+const zestaw03 = ["ja", "ty", "on", "my", "wy", "tam", "daj", "weź", "kot"];
+const zestawy = [zestaw01, zestaw02, zestaw03];
 
-let sylaby = Array.from(document.getElementsByClassName('sylaba'));
+//let sylaby = Array.from(document.getElementsByClassName('sylaba')); -> mozna tak, mozna tak ->:
+let sylaby = Array.from(document.querySelectorAll('.sylaba'));
 
 let divContent = document.getElementById("content");
 let divFullScr = document.getElementById("fullscr");
 
 
-
 let handleKlikOnKwadrat = function (event) {
     divContent.style.display = "none";
-    var litera = event.target.innerText;
-    divFullScr.innerHTML = '<p>' + litera + '</p>';
+    var sylaba = event.target.innerText;
+    divFullScr.innerHTML = '<p>' + sylaba + '</p>';
+
+    // document.querySelector('.fullscr').style.color="maroon";
+    // document.querySelector('.fullscr p').style.backgroundColor="maroon";
+    //podniesienie troche w gore - bardziej na srodku...:
+    divFullScr.querySelector('p').style.color="maroon";
+    divFullScr.querySelector('p').style.marginTop = "-200px";
+
+
     divFullScr.style.display = "block";
-    //Zeby nie klikal jak wsciekly chociaz przez chwile:
+    //Zeby nie widzial kursora, wiec nie klikal niepotrzebnie:
     divFullScr.style.cursor = "none";
-    divFullScr.onclick = null;
-    //Pokazanie duzej litery; mozna klikac:
+    //Pokazanie pojedynczej sylaby na calym ekranie, odegranie, potem przywrocenie kursora:
     setTimeout(() => divFullScr.classList.add("fullscr-anim"), 100);
+    odegrajSylabe(sylaba, 700);
+    //Powrot do ekranu z 9-ma sylabami:
+    przywrocWszystko(3000);
+}
+
+function przywrocWszystko(delay) {
     setTimeout(() => {
-        divFullScr.style.cursor = "pointer";
-        divFullScr.onclick = handleKlikOnBig;
-    }, 1500);
-    odegrajLitere(litera, 700);
-}    
+        divFullScr.classList.remove("fullscr-anim");
+        divFullScr.style.display = "none";
+        divContent.style.display = "block";
+    }, delay);
+}
+
+function odegrajSylabe(sylaba, delay) {
+    var plik = "snd/" + sylaba + ".ogg";
+    var sylabaSnd = new Audio(plik);
+    setTimeout(() => sylabaSnd.play(), delay);
+}
 
 
 function ladujZestaw() {
+/* Wyswietlenie sylab na kwadratach; dodanie handlera na kwadraty */    
+
     nrZestawu = localStorage.getItem('nrZestawu');
-    var idxZ = nrZestawu-1;   //-1 bo na index w tablicy
-    
+    var idxZ = nrZestawu - 1;   //-1 bo na index w tablicy
 
-    // sylaby.forEach( function(value,i) {value.innerHTML=i} ); - wzorzec parametrow
-    sylaby.forEach( (value,i) => {value.innerHTML='<p>'+zestawy[idxZ][i]+'</p>'} );
-
+    // sylaby.forEach( function(value,i) {value.innerHTML=i} ); - wzorzec dla parametrow
+    sylaby.forEach((value, i) => { value.innerHTML = '<p>' + zestawy[idxZ][i] + '</p>' });
 
     sylaby.forEach(kwadrat => kwadrat.onclick = handleKlikOnKwadrat);
-
 }
 
 
