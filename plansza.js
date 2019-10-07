@@ -32,11 +32,11 @@ let handleKlikOnKwadrat = function (event) {
     divFullScr.style.cursor = "none";
     //Pokazanie pojedynczej sylaby na calym ekranie, odegranie, potem przywrocenie kursora:
     setTimeout(() => divFullScr.classList.add("fullscr-anim"), 100);
-    //odegrajSylabe(sylaba, 700);
-        //Powrot do ekranu z 9-ma sylabami:
-    //przywrocWszystko(3000);
+    odegrajSylabe(sylaba, 700);
+    //Powrot do ekranu z 9-ma sylabami:
+    przywrocWszystko(3000);
 
-    sekwencyjnieWykonaj(grajNowa, przywrocNowa);
+    //sekwencyjnieWykonaj(grajNowa, przywrocNowa);
 }
 
 
