@@ -5,7 +5,7 @@ window.onload = ladujZestaw;
 
 const zestaw01 = ["ba", "er", "kro", "la", "o", "or", "sa", "ta", "wa"];
 const zestaw02 = ["ze", "dy", "eł", "in", "kra", "le", "mar", "mu", "do"];
-const zestaw03 = ["ja", "ty", "on", "my", "wy", "tam", "daj", "weź", "kot"];
+const zestaw03 = ["ja", "ty", "on", "my", "wy", "tam", "kto", "daj", "weź"];
 const zestawy = [zestaw01, zestaw02, zestaw03];
 
 //let sylaby = Array.from(document.getElementsByClassName('sylaba')); -> mozna tak, mozna tak ->:
