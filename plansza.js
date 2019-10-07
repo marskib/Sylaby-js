@@ -24,7 +24,7 @@ let handleKlikOnKwadrat = function (event) {
     // document.querySelector('.fullscr p').style.backgroundColor="maroon";
     //podniesienie troche w gore - bardziej na srodku...:
     divFullScr.querySelector('p').style.color="maroon";
-    divFullScr.querySelector('p').style.marginTop = "-200px";
+    divFullScr.querySelector('p').style.marginTop = "-20px";
 
 
     divFullScr.style.display = "block";
@@ -32,10 +32,34 @@ let handleKlikOnKwadrat = function (event) {
     divFullScr.style.cursor = "none";
     //Pokazanie pojedynczej sylaby na calym ekranie, odegranie, potem przywrocenie kursora:
     setTimeout(() => divFullScr.classList.add("fullscr-anim"), 100);
-    odegrajSylabe(sylaba, 700);
-    //Powrot do ekranu z 9-ma sylabami:
-    przywrocWszystko(3000);
+    //odegrajSylabe(sylaba, 700);
+        //Powrot do ekranu z 9-ma sylabami:
+    //przywrocWszystko(3000);
+
+    sekwencyjnieWykonaj(grajNowa, przywrocNowa);
 }
+
+
+function sekwencyjnieWykonaj(f1,f2){
+    f1();
+    f2();
+}
+
+function grajNowa() {
+    // alert("w grajNowa");
+
+    var plik = "snd/" + "kto" + ".ogg";
+    var sylabaSnd = new Audio(plik);
+    sylabaSnd.play();
+}
+
+function przywrocNowa() {
+    //alert("p1");
+    divFullScr.classList.remove("fullscr-anim");
+    divFullScr.style.display = "none";
+    divContent.style.display = "block";
+}
+
 
 function przywrocWszystko(delay) {
     setTimeout(() => {
