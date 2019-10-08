@@ -38,16 +38,28 @@ body {
     padding-top:10px;
 }
 
+.zestawy ul li {
+    display: inline-block;
+    padding: 0 2%;
+}
+
+.zestawy div p {
+    font-size: .7em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
 .start a {
     display: block;
-    width: 30%;
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
     text-align: center;
     color: black;
     font-weight: 700;
-    text-decoration: none;
-    font-size: 200%;
+    font-size: 1.5em;
     line-height: 400%;
-    margin:0 auto;
     background-color: green;
     border-radius: 5%;
     box-shadow: 5px 5px grey;
@@ -61,3 +73,19 @@ body {
 .start a:active {
     box-shadow: none;
 }
+
+@media (max-width: 1024px) {
+
+    :root {
+        --wys-ski: 70vh;
+    }
+
+    #container {
+        margin-top: 20px;
+    }
+
+    .start a {
+      background-color: red;
+    }
+    
+  }
