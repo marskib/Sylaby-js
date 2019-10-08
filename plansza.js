@@ -11,7 +11,7 @@ const zestawy = [zestaw01, zestaw02, zestaw03];
 //let sylaby = Array.from(document.getElementsByClassName('sylaba')); -> mozna tak, mozna tak ->:
 let sylaby = Array.from(document.querySelectorAll('.sylaba'));
 
-let divContent1 = document.getElementById("content");
+let divContent = document.getElementById("content");
 let divFullScr = document.getElementById("fullscr");
 
 
