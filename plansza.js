@@ -11,11 +11,11 @@ const zestawy = [zestaw01, zestaw02, zestaw03];
 //let sylaby = Array.from(document.getElementsByClassName('sylaba')); -> mozna tak, mozna tak ->:
 let sylaby = Array.from(document.querySelectorAll('.sylaba'));
 
-let divContent = document.getElementById("content");
+let divContent1 = document.getElementById("content");
 let divFullScr = document.getElementById("fullscr");
 
 
-let handleKlikOnKwadrat = function (event) {
+let handleKlikOnKwadrat = function (event)  {
     divContent.style.display = "none";
     var sylaba = event.target.innerText;
     divFullScr.innerHTML = '<p>' + sylaba + '</p>';
