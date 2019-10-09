@@ -8,7 +8,7 @@
         --szer-ski: 70vw;
         --wys-ski: 90vh;
         --fontSize-ski: 5em;
-        font-family: Verdana, Arial, sans-serif;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
     }
 
     body {
@@ -74,6 +74,7 @@
     @media (max-width:1024px) {
         :root {
             --szer-ski: 90vw;
+            --wys-ski:  70vh;
             /* --fontSize-ski: 4rem; */
             --fontSize-ski: 2.5rem;
         }
