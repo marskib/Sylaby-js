@@ -66,9 +66,17 @@ body {
     transition: .2s;
 }
 
-.start a:hover {
-    background-color: yellowgreen;
-}
+
+
+
+@media (min-width: 1025px) {
+
+    .start a:hover {
+        background-color: yellowgreen;
+    }    
+      
+  }
+
 
 .start a:active {
     box-shadow: none;
