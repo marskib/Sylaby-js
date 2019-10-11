@@ -74,7 +74,7 @@
     @media (max-width:1024px) {
         :root {
             --szer-ski: 90vw;
-            --wys-ski:  70vh;
+            --wys-ski:  60vh;
             /* --fontSize-ski: 4rem; */
             --fontSize-ski: 2.5rem;
         }
