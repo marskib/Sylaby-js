@@ -66,6 +66,13 @@ body {
     transition: .2s;
 }
 
+p#info-android {
+    font-size: 110%;
+}
+p#info-android a {
+    text-decoration: none;
+}
+
 
 
 
