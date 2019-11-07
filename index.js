@@ -9,7 +9,7 @@ function przejmijZestaw() {
 
 function dajWartoscRadio(RGrupa) {
    var radios = document.getElementsByName(RGrupa);
-    console.log("radios: ",radios);
+    //console.log("radios: ",radios);
     for (var i = 0, length = radios.length; i < length; i++) {
         if (radios[i].checked) {
             return radios[i].value;

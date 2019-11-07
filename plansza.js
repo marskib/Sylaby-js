@@ -15,7 +15,7 @@ let divContent = document.getElementById("content");
 let divFullScr = document.getElementById("fullscr");
 
 
-let handleKlikOnKwadrat = function (event)  {
+let handleKlikOnKwadrat = function (event) {
     divContent.style.display = "none";
     var sylaba = event.target.innerText;
     divFullScr.innerHTML = '<p>' + sylaba + '</p>';
@@ -52,16 +52,17 @@ function odegrajSylabe(sylaba, delay) {
 
 
 function ladujZestaw() {
-/* Wyswietlenie sylab na kwadratach; dodanie handlera na kwadraty */    
+    /* Wyswietlenie sylab na kwadratach; dodanie handlera na kwadraty */
 
+    var idxZ = 0;
     nrZestawu = localStorage.getItem('nrZestawu');
-    var idxZ = nrZestawu - 1;   //-1 bo na index w tablicy
+    if (nrZestawu) //zabezpieczenie przed wejsciem bezposredni na plansza.html
+        idxZ = nrZestawu - 1; //-1 bo na index w tablicy
 
     // sylaby.forEach( function(value,i) {value.innerHTML=i} ); - wzorzec dla parametrow
-    sylaby.forEach((value, i) => { value.innerHTML = '<p>' + zestawy[idxZ][i] + '</p>' });
+    sylaby.forEach((value, i) => {
+        value.innerHTML = '<p>' + zestawy[idxZ][i] + '</p>'
+    });
 
     sylaby.forEach(kwadrat => kwadrat.onclick = handleKlikOnKwadrat);
 }
-
-
-
